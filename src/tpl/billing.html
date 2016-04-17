@@ -1,0 +1,273 @@
+<div class="bg-light lter b-b wrapper-md">
+  <h3 class="m-n text-success">Billing Summary</h3>
+  <h4 class="m-t text-muted"><i class="fa fa-circle text-success m-r-xs text-xs"></i> Your account is in good standing</h4>
+</div>
+
+
+
+<!-- wrapper -->
+    <div class="wrapper-md">
+
+      <!-- payment summary -->
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="panel panel-default">
+            <div class="panel-heading font-bold">
+              Payment Summary
+            </div>
+            <div class="table-responsive">
+              <table class="table table-striped b-t b-light">
+                <thead>
+                  <tr>
+                    <th>Outstanding Balance</th>
+                    <th>Total Billed</th>
+                    <th>Primary Payment Method</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>$0.00 USD</td>
+                    <td>$27,940.05 USD</td>
+                    <td>Visa (4450)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="panel panel-default">
+            <div class="panel-heading font-bold">
+              Recent Billing Activity
+              <span ng-init="data2=[ 105,102,106,107,105,104,101,99,98,109,105,100,108,110,105,110,109 ]" 
+              ui-jq="sparkline" 
+              ui-options="{{data2}}, {type:'bar', height:20, barWidth:5, barSpacing:1, barColor:'#dce5ec'}" 
+              class="sparkline inline pull-right">loading...
+            </span>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-striped b-t b-light">
+                <thead>
+                  <tr>
+                    <th>Last 24 Hours</th>
+                    <th>Last 7 Days</th>
+                    <th>Last 14 Days</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>$78.00 USD</td>
+                    <td>$1,940.05 USD</td>
+                    <td>$3,523.40 USD</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- / payment summary -->    
+
+      <div class="panel panel-default">
+        <div class="panel-heading font-bold">
+          Transactions
+        </div>
+        <div class="row wrapper">
+          <div class="col-sm-4 m-b-xs">
+            <div class="btn-group dropdown" dropdown>
+              <button type="button" class="btn btn-sm btn-default" dropdown-toggle>
+                Lifetime
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href>Today</a></li>
+                <li><a href>Yesterday</a></li>
+                <li><a href>Last 7 days</a></li>
+                <li><a href>Last 14 days</a></li>
+                <li><a href>Last 30 days</a></li>
+                <li><a href>Last month</a></li>
+                <li><a href>Last quarter</a></li>
+              </ul>
+            </div>
+            <button class="btn btn-sm btn-default">View report</button>                
+          </div>
+          <div class="col-sm-4">
+            <div class="input-group">
+              <input type="text" class="input-sm form-control" placeholder="Search your transactions">
+              <span class="input-group-btn">
+                <button class="btn btn-sm btn-default" type="button"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </div>
+          <div class="col-sm-4">            
+            <button class="btn btn-sm btn-default pull-right"><i class="fa fa-download m-r-xs"></i> Download all monthly invoices</button>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped b-t b-light">
+            <thead>
+              <tr>
+                <th style="width:20px;">
+                  <label class="i-checks m-b-none">
+                    <input type="checkbox"><i></i>
+                  </label>
+                </th>
+                <th>Transaction Date</th>
+                <th>Transaction ID</th>
+                <th>Invoice</th>
+                <th>Description</th>
+                <th>Payment Method</th>
+                <th>Total Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+                <td>12-11-2014</td>
+                <td>3130001741022496143</td>
+                <td>Download as PDF</td>
+                <td>Handler Ads Daily Delivery</td>
+                <td>MasterCard (8941)</td>
+                <td>$4,956.99 USD</td>
+              </tr>
+              <tr>
+                <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+                <td>01-07-2015</td>
+                <td>1184446701998441846</td>
+                <td>Download as PDF</td>
+                <td>Handler Ads Daily Delivery</td>
+                <td>Visa (4450)</td>
+                <td>$2,235.14 USD</td>
+              </tr>
+              <tr>
+                <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+                <td>01-22-2015</td>
+                <td>2445454597662180724</td>
+                <td>Download as PDF</td>
+                <td>Handler Ads Daily Delivery</td>
+                <td>Visa (4450)</td>
+                <td>$1,022.00 USD</td>
+              </tr> 
+              <tr>
+                <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+                <td>02-19-2015</td>
+                <td>1022496143313000174</td>
+                <td>Download as PDF</td>
+                <td>Handler Ads Daily Delivery</td>
+                <td>Visa (4450)</td>
+                <td>$5,766.44 USD</td>
+              </tr>
+              <tr>
+                <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+                <td>01-22-2015</td>
+                <td>4331300017410224961</td>
+                <td>Download as PDF</td>
+                <td>Handler Ads Daily Delivery</td>
+                <td>Amex (6603)</td>
+                <td>$3,821.80 USD</td>
+              </tr> 
+            </tbody>
+          </table>
+        </div>
+        <footer class="panel-footer">
+          <div class="row">
+            <div class="col-sm-4 hidden-xs">
+            </div>
+            <div class="col-sm-4 text-center">
+              <small class="text-muted inline m-t-sm m-b-sm">showing 1-5 of 10 items</small>
+            </div>
+            <div class="col-sm-4 text-right text-center-xs">                
+              <ul class="pagination pagination-sm m-t-none m-b-none">
+                <li><a href>1</a></li>
+                <li><a href>2</a></li>
+                <li><a href><i class="fa fa-chevron-right"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <!-- / transactions -->
+
+      <!-- payment methods -->
+      <div class="panel panel-default">
+        <div class="panel-heading font-bold">
+          Payment Methods
+        </div>
+        <div class="row wrapper">
+          <div class="col-sm-12 m-b-xs">
+            <div class="btn-group dropdown" dropdown>
+              <button type="button" class="btn btn-sm btn-default" dropdown-toggle>
+                Edit
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href>Edit</a></li>
+                <li><a href>Make Primary</a></li>
+                <li><a href>Remove</a></li>
+              </ul>
+            </div>
+            <div class="inline m-r text-left pull-right" ng-controller="ModalDemoCtrl">
+          <script type="text/ng-template" id="myModalContent.html">
+            <div ng-include="'tpl/modal_billing.html'"></div>
+          </script>
+              <button href="" class="btn btn-sm btn-default btn-addon" ng-click="open()"><i class="fa fa-plus"></i>Add Payment Method</button>
+            </div>              
+          </div>
+          <div class="col-sm-4">
+          </div>
+          <div class="col-sm-3">
+            
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped b-t b-light">
+            <thead>
+              <tr>
+                <th style="width:20px;">
+                  <label class="i-checks m-b-none">
+                    <input type="checkbox"><i></i>
+                  </label>
+                </th>
+                <th>Source</th>
+                <th>Details</th>
+                <th>Expires</th>
+                <th>Primary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+                <td>Debit Card Visa</td>
+                <td>xxxx-xxxx-xxxx-4450</td>
+                <td>01/2016</td>
+                <td> <i class="fa fa-check text-success"></i></td>
+              </tr>
+              <tr>
+                <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+                <td>Credit Card MasterCard</td>
+                <td>xxxx-xxxx-xxxx-8941</td>
+                <td>06/2017</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+                <td>Credit Card Amex</td>
+                <td>xxxx-xxxx-xxxx-6603</td>
+                <td>11/2016</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+                <td>Bitcoin</td>
+                <td>1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T</td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- / payment methods -->
+
+    </div>
+    <!-- / wrapper -->

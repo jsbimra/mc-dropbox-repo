@@ -1,0 +1,197 @@
+<div class="bg-light lter b-b wrapper-md">
+  <h3 class="m-n text-info">Campaign Insights
+    <span class="pull-right">
+      <a ui-sref="app.form.belloexisting"><button class="btn btn-default btn-addon"><i class="fa fa-eye"></i>View campaign details</button></a>
+      <a class="btn btn-default text-sm" ui-toggle-class="button text-default">
+        <span class="text text-success">
+          <i class="fa fa-play text-success m-r-xs"></i> Active campaign
+        </span>
+        <span class="text-active">
+          <i class="fa fa-pause text-danger m-r-xs"></i> Paused campaign
+        </span>
+      </a>
+    </span>
+  </h3>
+  <h4 class="m-t"><i class="fa fa-bar-chart-o"></i> Welcome to Handler</h4>
+</div>
+
+<div class="wrapper-md" ng-controller="FormDemoCtrl">
+  <div class="col">
+
+  <div class="panel panel-default">
+  <div class="panel-heading font-bold">Financials</div>
+    <div class="wrapper bg-white-only b-b">
+      <div class="row text-center h5">
+        <div class="col-sm-2 col-xs-4">
+          <div class="m-b-sm">$ 000,000</div>
+          <div>TOTAL BUDGET</div>
+        </div>
+        <div class="col-sm-2 col-xs-4">
+          <div class="m-b-sm">$ 00,000</div>
+          <div>DAILY BUDGET </div>
+        </div>
+        <div class="col-sm-2 col-xs-4">
+          <div class="m-b-sm">$ 0.00</div>
+          <div>MAX BID</div>
+        </div>
+        <div class="col-sm-2 col-xs-4">
+          <div class="m-b-sm">$ 000,000</div>
+          <div>SPENT</div>
+        </div>
+        <div class="col-sm-2 col-xs-4">
+          <div class="m-b-sm">00/00/2016</div>
+          <div>START DATE</div>
+        </div>
+        <div class="col-sm-2 col-xs-4">
+          <div class="m-b-sm">---</div>
+          <div>END DATE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="panel panel-default">
+      <div class="bg-black dker wrapper-lg" ng-controller="FlotChartDemoCtrl">
+        <ul class="nav nav-pills nav-xxs nav-rounded m-b-lg">
+          <li class="active"><a href>Total Delivered in last 7 days</a></li>
+          <li><a href ng-click="refreshData()">Total Delivered in last 14 days</a></li>
+          <li><a href ng-click="refreshData()">Total Delivered in last 30 days</a></li>
+        </ul>
+        <div ui-jq="plot" ui-refresh="d0_1" ui-options="
+        [
+        { data: {{d0_1}}, points: { show: true, radius: 2}, splines: { show: true, tension: 0.4, lineWidth: 1 } }
+        ],
+        {
+        colors: ['{{app.color.info}}', '{{app.color.primary}}'],
+        series: { shadowSize: 3 },
+        xaxis:{ font: { color: '#507b9b' } },
+        yaxis:{ font: { color: '#507b9b' }, max:16 },
+        grid: { hoverable: true, clickable: true, borderWidth: 0, color: '#1c2b36' },
+        tooltip: true,
+        tooltipOpts: { content: 'Visits of %x.1 is %y.4',  defaultTheme: false, shifts: { x: 10, y: -25 } }
+      }
+      " style="min-height:360px" >
+      </div>
+    </div>
+  </div>
+
+
+<div class="panel panel-default">      
+  <div class="panel-heading font-bold">A/B Test: Campaign A</div>
+  <div class="wrapper-md bg-white-only b-b">
+
+    <div class="row text-center">
+      <div class="col-sm-2 col-xs-4">
+        <div class="h4 m-b-sm">000,000,000</div>
+        <div><i class="fa fa-fw fa-inbox text-default text-sm"></i> Delivered</div>
+      </div>
+      <div class="col-sm-2 col-xs-4">
+        <div class="h4 m-b-sm">00%</div>
+        <div><i class="fa fa-fw fa-file-text text-default text-sm"></i> Open Rate </div>
+      </div>
+      <div class="col-sm-2 col-xs-4">
+        <div class="h4 m-b-sm">00%</div>
+        <div><i class="fa fa-fw fa-external-link text-default text-sm"></i> CTR</div>
+      </div>
+      <div class="col-sm-2 col-xs-4">
+        <div class="h4 m-b-sm">00%</div>
+        <div><i class="fa fa-fw fa-star text-default text-sm"></i> Starred</div>
+      </div>
+      <div class="col-sm-2 col-xs-4">
+        <div class="h4 m-b-sm">00%</div>
+        <div><i class="fa fa-fw fa-mail-forward text-default text-sm"></i> Shared</div>
+      </div>
+      <div class="col-sm-2 col-xs-4">
+        <div class="h4 m-b-sm">00%</div>
+        <div><i class="fa fa-fw fa-dashboard text-default text-sm"></i> --</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading font-bold">A/B Test: Campaign B</div>
+  <div class="wrapper-md bg-white-only b-b">
+    <div class="row text-center">
+      <div class="col-sm-2 col-xs-4">
+        <div class="h4 m-b-sm">000,000,000</div>
+        <div><i class="fa fa-fw fa-inbox text-default text-sm"></i> Delivered</div>
+      </div>
+      <div class="col-sm-2 col-xs-4">
+        <div class="h4 m-b-sm">00%</div>
+        <div><i class="fa fa-fw fa-file-text text-default text-sm"></i> Open Rate </div>
+      </div>
+      <div class="col-sm-2 col-xs-4">
+        <div class="h4 m-b-sm">00%</div>
+        <div><i class="fa fa-fw fa-external-link text-default text-sm"></i> CTR</div>
+      </div>
+      <div class="col-sm-2 col-xs-4">
+        <div class="h4 m-b-sm">00%</div>
+        <div><i class="fa fa-fw fa-star text-default text-sm"></i> Starred</div>
+      </div>
+      <div class="col-sm-2 col-xs-4">
+        <div class="h4 m-b-sm">00%</div>
+        <div><i class="fa fa-fw fa-mail-forward text-default text-sm"></i> Shared</div>
+      </div>
+      <div class="col-sm-2 col-xs-4">
+        <div class="h4 m-b-sm">00%</div>
+        <div><i class="fa fa-fw fa-dashboard text-default text-sm"></i> --</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading font-bold">
+    Platform and Devices
+  </div>
+  <div class="table-responsive">
+    <table class="table table-striped b-t b-light">
+      <thead>
+        <tr>
+          <th>Operating System</th>
+          <th>Delivered</th>
+          <th>Open Rate</th>
+          <th>CTR</th>
+          <th>Starred</th>
+          <th>Shared</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>iOS</td>
+          <td>000,000</td>
+          <td>00%</td>
+          <td>00%</td>
+          <td>00%</td>
+          <td>00%</td>
+        </tr>
+        <tr>
+          <td>Android</td>
+          <td>000,000</td>
+          <td>00%</td>
+          <td>00%</td>
+          <td>00%</td>
+          <td>00%</td>
+        </tr>
+        <tr>
+          <td>Desktop and laptop computers</td>
+          <td>000,000</td>
+          <td>00%</td>
+          <td>00%</td>
+          <td>00%</td>
+          <td>00%</td>
+        </tr>
+        <tr>
+          <td>Other mobile devices</td>
+          <td>000,000</td>
+          <td>00%</td>
+          <td>00%</td>
+          <td>00%</td>
+          <td>00%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

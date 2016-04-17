@@ -1,0 +1,708 @@
+<div class="bg-dark wrapper-md">
+  <h3 class="m-n text-white"><i class="fa fa-shield"></i> Shield</h3>
+  <h4 class="m-t text-white">Against spammers</h4>
+</div>
+
+
+<div class="wrapper-md">
+  <div class="col">
+
+    <div class="panel panel-default">
+      <div class="wrapper bg-dark">
+        <div class="row text-center h5">
+          <div class="col-sm-3 col-xs-4">
+            <div class="m-b-sm h3">0,000,000</div>
+            <div><i class="fa fa-user m-r-sm"></i> 3 POINTS</div>
+          </div>
+          <div class="col-sm-3 col-xs-4">
+            <div class="m-b-sm text-warning h3">0,000,000</div>
+            <div><i class="fa fa-user m-r-sm"></i> 5 POINTS</div>
+          </div>
+          <div class="col-sm-3 col-xs-4">
+            <div class="m-b-sm text-danger h3">0,000,000</div>
+            <div><i class="fa fa-user m-r-sm"></i> 10 POINTS</div>
+          </div>
+          <div class="col-sm-3 col-xs-4">
+            <div class="m-b-sm text-danger h3 font-bold">0,000,000</div>
+            <div><i class="fa fa-user m-r-sm"></i> 10+ POINTS</div>
+          </div>
+        </div><!-- /.row-->
+      </div><!-- /.wrapper-->
+    </div><!-- /.panel panel-default-->
+
+    <!-- POTENTIAL SPAMMERS-->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+       <small class="inline pull-right text-muted">showing 1-10 of 2,000 people</small>
+        <i class="fa fa-users m-r"></i> At risk users
+      </div>
+      <div class="row wrapper">
+        <div class="col-sm-4">
+          <div class="input-group">
+            <input type="text" class="input-sm form-control" placeholder="Search by @username">
+            <span class="input-group-btn">
+              <button class="btn btn-sm btn-default" type="button"><i class="fa fa-search"></i></button>
+            </span>
+          </div>               
+        </div>
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+        </div>
+      </div><!-- /.row wrapper-->
+      <div class="table-responsive" ng-controller="ModalDemoCtrl">
+      <!-- modal -->
+      <script type="text/ng-template" id="myModalContent.html">
+      <div ng-include="'tpl/people_individual_preview.html'"></div>
+      </script>
+      <!-- /modal -->
+        <table class="table table-striped b-t b-light">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Member since</th>
+              <th>3 points since</th>
+              <th>5 points since</th>
+              <th>10 points since</th>
+              <th>Blocked on</th>
+              <th>Deactivated on</th>
+              <th>View</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="text-sm">
+              <td>@amazinghandlerusers</td>
+              <td>01/01/2016</td>
+              <td></td>
+              <td></td>
+              <td>01/01/2016</td>
+              <td></td>
+              <td></td>
+              <td><a ui-sref="app.individual"><i class="fa fa-file-text-o m-r-sm"></i></a> <a ui-sref="" ng-click="open('')"><i class="fa fa-eye m-l-sm"></i></a></td>
+            </tr>
+            <tr class="text-sm">
+              <td>@amazinghandlerusers</td>
+              <td>01/01/2016</td>
+              <td></td>
+              <td></td>
+              <td>01/01/2016</td>
+              <td></td>
+              <td></td>
+              <td><a ui-sref="app.individual"><i class="fa fa-file-text-o m-r-sm"></i></a> <a ui-sref="" ng-click="open('')"><i class="fa fa-eye m-l-sm"></i></a></td>
+            </tr>
+            <tr class="text-sm">
+              <td>@amazinghandlerusers</td>
+              <td>01/01/2016</td>
+              <td></td>
+              <td></td>
+              <td>01/01/2016</td>
+              <td></td>
+              <td></td>
+              <td><a ui-sref="app.individual"><i class="fa fa-file-text-o m-r-sm"></i></a> <a ui-sref="" ng-click="open('')"><i class="fa fa-eye m-l-sm"></i></a></td>
+            </tr>
+            <tr class="text-sm">
+              <td>@amazinghandlerusers</td>
+              <td>01/01/2016</td>
+              <td></td>
+              <td></td>
+              <td>01/01/2016</td>
+              <td></td>
+              <td></td>
+              <td><a ui-sref="app.individual"><i class="fa fa-file-text-o m-r-sm"></i></a> <a ui-sref="" ng-click="open('')"><i class="fa fa-eye m-l-sm"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- /.table-responsive-->
+      <footer class="panel-footer">
+        <div class="row">
+          <div class="col-sm-12 text-center m-t-sm">
+            <pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm m-t-none m-b" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+          </div>
+        </div><!-- /.row-->
+      </footer>
+    </div><!-- /.panel panel-default-->
+
+    <!-- FLAGGED USERS-->
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <small class="inline pull-right text-muted">showing 1-10 of 65,000 people</small>
+            <i class="fa fa-flag text-danger m-r"></i> Flagged Users
+          </div>
+          <div class="row wrapper">
+            <div class="col-sm-4">
+              <div class="input-group">
+                <input type="text" class="input-sm form-control" placeholder="Search by @username">
+                <span class="input-group-btn">
+                  <button class="btn btn-sm btn-default" type="button"><i class="fa fa-search"></i></button>
+                </span>
+              </div>           
+            </div>
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4">
+            </div>
+          </div><!-- /.row wrapper-->
+          <div class="table-responsive" ng-controller="ModalDemoCtrl">
+            <!-- modal -->
+            <script type="text/ng-template" id="myModalContent.html">
+            <div ng-include="'tpl/people_individual_preview.html'"></div>
+            </script>
+            <!-- /modal -->
+            <table class="table table-striped b-t b-light">
+              <thead>
+                <tr>
+                  <th>Username</th>
+                  <th>Member since</th>
+                  <th>First flag on</th>
+                  <th>Second flag on</th>
+                  <th>View profile</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-sm">
+                  <td>@amazinghandlerusers</td>
+                  <td>01/01/2016</td>
+                  <td></td>
+                  <td></td>
+                  <td><a ui-sref="app.individual"><i class="fa fa-file-text-o m-r-sm"></i></a> <a ui-sref="" ng-click="open('')"><i class="fa fa-eye m-l-sm"></i></a></td>
+                </tr>
+                <tr class="text-sm">
+                  <td>@amazinghandlerusers</td>
+                  <td>01/01/2016</td>
+                  <td></td>
+                  <td></td>
+                  <td><a ui-sref="app.individual"><i class="fa fa-file-text-o m-r-sm"></i></a> <a ui-sref="" ng-click="open('')"><i class="fa fa-eye m-l-sm"></i></a></td>
+                </tr>
+                <tr class="text-sm">
+                  <td>@amazinghandlerusers</td>
+                  <td>01/01/2016</td>
+                  <td></td>
+                  <td></td>
+                  <td><a ui-sref="app.individual"><i class="fa fa-file-text-o m-r-sm"></i></a> <a ui-sref="" ng-click="open('')"><i class="fa fa-eye m-l-sm"></i></a></td>
+                </tr>
+                <tr class="text-sm">
+                  <td>@amazinghandlerusers</td>
+                  <td>01/01/2016</td>
+                  <td></td>
+                  <td></td>
+                  <td><a ui-sref="app.individual"><i class="fa fa-file-text-o m-r-sm"></i></a> <a ui-sref="" ng-click="open('')"><i class="fa fa-eye m-l-sm"></i></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- /.table-responsive-->
+          <footer class="panel-footer">
+            <div class="row">
+              <div class="col-sm-12 text-center m-t-sm">                
+                <pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm m-t-none m-b" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+              </div>
+            </div><!-- /.row-->
+          </footer>
+        </div><!-- /.panel panel-default-->
+      </div><!-- /.col-->
+
+      <!-- RIGHT COLUMN -->
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <i class="fa fa-flag text-danger m-r"></i> Flagged Users
+          </div>
+          <div class="hbox bg-warning bg">
+            <div class="col wrapper text-dark">
+              <span>Received 1 Flag</span>
+              <div class="h1 text-dark font-thin">790</div>
+            </div>
+            <div class="col wrapper bg-danger text-white font-bold">
+              <span>Received 2 Flags</span>
+              <div class="h1 text-white font-thin">83</div>
+            </div>
+          </div>
+          <div class="panel-footer bg-light lter wrapper">
+            <div class="row">
+              <div class="col-xs-4">
+                <small class="text-muted block">In last 24hrs</small>
+                <span class="text-md">00,000</span>
+              </div>
+              <div class="col-xs-4">
+                <small class="text-muted block">In last 12hrs</small>
+                <span class="text-md">00,000</span> 
+              </div>
+              <div class="col-xs-4">
+                <small class="text-muted block">In last 3hrs</small>
+                <span class="text-md">00,000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.panel panel-default-->
+    </div><!-- /.col-->    
+  </div><!-- /.row-->
+
+  <!-- RANKING PANEL-->
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <i class="fa fa-flask m-r"></i>Ranking algorythm
+    </div>
+    <div class="panel-body">        
+
+      <!-- LEFT COLUMN BEGINS-->          
+      <div class="col-sm-6 b-r">
+        <h4><i class="fa fa-twitter text-info m-r-sm"></i> Twitter account</h4>
+        <div class="panel-body">
+          <form class="form-horizontal" method="get">
+
+            <!-- Twitter account creation date-->                
+            <div class="form-group">
+              <label class="col-sm-4 control-label">Twitter account creation date</label>
+              <div class="col-sm-6">
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>Less than <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="90 days ago">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>Less than <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="60 days ago">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>Less than <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="30 days ago">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->
+              <div class="col-sm-2 pull-right">
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="1 Point">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="3 Points">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="5 Points">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->                  
+            </div><!--/. form-group-->
+
+            <!-- Twitter profile picture-->
+            <div class="form-group">
+              <label class="col-sm-4 control-label">No profile picture</label>
+              <div class="col-sm-6">
+                <label class="i-switch m-t-xs m-r">
+                  <input type="checkbox" checked>
+                  <i></i>
+                </label>
+              </div><!--/. col-->
+              <div class="col-sm-2 pull-right">
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="3 Points">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->                  
+            </div><!--/. form-group-->
+
+            <!-- Twitter profile description-->
+            <div class="form-group">
+              <label class="col-sm-4 control-label">No profile description</label>
+              <div class="col-sm-6">
+                <label class="i-switch m-t-xs m-r">
+                  <input type="checkbox" checked>
+                  <i></i>
+                </label>
+              </div><!--/. col-->
+              <div class="col-sm-2 pull-right">
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="1 Point">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->                  
+            </div><!--/. form-group-->
+
+            <!-- Twitter profile location-->
+            <div class="form-group">
+              <label class="col-sm-4 control-label">No profile location</label>
+              <div class="col-sm-6">
+                <label class="i-switch m-t-xs m-r">
+                  <input type="checkbox" checked>
+                  <i></i>
+                </label>
+              </div><!--/. col-->
+              <div class="col-sm-2 pull-right">
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="1 Point">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->                  
+            </div><!--/. form-group-->
+
+            <!-- Ratio: Followers to Following-->                
+            <div class="form-group">
+              <label class="col-sm-4 control-label">Ratio: Followers to Following</label>
+              <div class="col-sm-6">
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>Less than <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="60 percent">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>Less than <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="55% percent">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>Less than <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="50% percent">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->
+              <div class="col-sm-2 pull-right">
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="1 Point">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="3 Points">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="5 Points">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->                  
+            </div><!--/. form-group-->
+
+            <!-- Ratio: Tweets per account creation days-->                
+            <div class="form-group">
+              <label class="col-sm-4 control-label">Ratio: Tweets per account creation days</label>
+              <div class="col-sm-6">
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>More than <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="15 tweets per day">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>More than <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="20 tweets per day">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>More than <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="30 tweets per day">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->
+              <div class="col-sm-2 pull-right">
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="1 Point">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="3 Points">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="5 Points">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->                  
+            </div><!--/. form-group-->
+
+          </form>
+        </div><!--/. panel-body-->
+      </div><!--/. col-->
+
+      <!-- RIGHT COLUMN BEGINS-->          
+      <div class="col-sm-6">
+        <h4><i class="fa fa-globe m-r-sm text-default"></i> HANDLER account</h4>
+        <div class="panel-body">
+          <form class="form-horizontal" method="get">
+
+            <!-- Handler account creation date-->                
+            <div class="form-group">
+              <label class="col-sm-4 control-label">Handler account creation date</label>
+              <div class="col-sm-6">
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>Less than <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="60 days ago">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>Less than <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="45 days ago">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>Less than <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="30 days ago">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->
+              <div class="col-sm-2 pull-right">
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="1 Point">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="3 Points">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="5 Points">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->                  
+            </div><!--/. form-group-->
+
+            <!-- Threads -->                
+            <div class="form-group">
+              <label class="col-sm-4 control-label">Emails threads</label>
+              <div class="col-sm-6">
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>Less than <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="30">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>Less than <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="20">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>Less than <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="10">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->
+              <div class="col-sm-2 pull-right">
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="1 Point">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="3 Points">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="5 Points">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->                  
+            </div><!--/. form-group-->
+
+            <!-- Ratio: Response rate to sent emails-->                
+            <div class="form-group">
+              <label class="col-sm-4 control-label">Ratio: Response rate to sent emails within 2 days</label>
+              <div class="col-sm-6">
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>Less than <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="30%">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>Less than <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="50%">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>Less than <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="75%">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->
+              <div class="col-sm-2 pull-right">
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="1 Point">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="3 Points">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="5 Points">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->                  
+            </div><!--/. form-group-->
+
+            <!-- Spam report against user-->                
+            <div class="form-group">
+              <label class="col-sm-4 control-label">Spam report against user</label>
+              <div class="col-sm-6">
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>Exactly <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="1">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>More than <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="1">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->
+              <div class="col-sm-2 pull-right">
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="3 Point">
+                </div><!-- /.input-group -->
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="5 Points">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->                  
+            </div><!--/. form-group-->
+
+            <!-- Sign-ins: Simultaneous-->                
+            <div class="form-group">
+              <label class="col-sm-4 control-label">Sign-ins: Simultaneous</label>
+              <div class="col-sm-6">
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>Exactly <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="2">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->
+              <div class="col-sm-2 pull-right">
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="3 Point">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->                  
+            </div><!--/. form-group-->
+
+            <!-- Sign-ins: various locations-->                
+            <div class="form-group">
+              <label class="col-sm-4 control-label">Sign-ins: various locations</label>
+              <div class="col-sm-6">
+                <div class="input-group m-b">
+                  <div class="input-group-btn dropdown" dropdown>
+                    <button type="button" class="btn btn-default" dropdown-toggle>Exactly <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href>Less than</a></li>
+                      <li><a href>More than</a></li>
+                      <li><a href>Exactly</a></li>
+                    </ul>
+                  </div><!-- /.btn-group -->
+                  <input type="text" class="form-control" placeholder="---">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->
+              <div class="col-sm-2 pull-right">
+                <div class="input-group m-b">
+                  <input type="text" class="form-control" placeholder="-">
+                </div><!-- /.input-group -->
+              </div><!--/. col-->                  
+            </div><!--/. form-group-->                
+          </form>
+        </div><!--/. panel-body-->
+      </div><!--/. col-->
+    </div><!--/. panel-body-->
+  </div><!--/. panel panel-default-->
+
+</div><!--/.row-->
+</div><!-- /.wrapper-md-->

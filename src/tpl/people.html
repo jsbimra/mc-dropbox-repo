@@ -1,0 +1,100 @@
+<div class="bg-light lter b-b wrapper-md">
+  <h3 class="m-n text-info">People</h3>
+  <h4 class="m-t">Population overview</h4>
+</div>
+
+
+<div class="wrapper-md">
+  <div class="col">
+
+    <!-- POTENTIAL SPAMMERS-->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <i class="fa fa-users m-r"></i> People
+      </div>
+      <div class="table-responsive" ng-controller="ModalDemoCtrl">
+      <!-- modal -->
+      <script type="text/ng-template" id="myModalContent.html">
+      <div ng-include="'tpl/people_individual_preview.html'"></div>
+      </script>
+      <!-- /modal -->
+        <table class="table table-striped b-t b-light">
+          <thead>
+            <tr>
+              <th>@Username</th>
+              <th>Member since</th>
+              <th>Points</th>
+              <th>Status</th>
+              <th>View</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="text-sm">
+              <td>@amazinghandlerusers</td>
+              <td>01/01/2016</td>
+              <td>0</td>
+              <td><i class="fa fa-circle text-success m-l-sm"></i> OK</td>
+              <td><a ui-sref="app.individual"><i class="fa fa-file-text-o m-r-sm"></i></a> <a ui-sref="" ng-click="open('')"><i class="fa fa-eye m-l-sm"></i></a></td>
+            </tr>
+            <tr class="text-sm">
+              <td>@amazinghandlerusers</td>
+              <td>01/01/2016</td>
+              <td>3</td>
+              <td><i class="fa fa-circle text-success m-l-sm"></i> OK</td>
+              <td><a ui-sref="app.individual"><i class="fa fa-file-text-o m-r-sm"></i></a> <a ui-sref="" ng-click="open('')"><i class="fa fa-eye m-l-sm"></i></a></td>
+            </tr>
+            <tr class="text-sm">
+              <td>@amazinghandlerusers</td>
+              <td>01/01/2016</td>
+              <td>5</td>
+              <td><i class="fa fa-circle text-success m-l-sm"></i> OK</td>
+              <td><a ui-sref="app.individual"><i class="fa fa-file-text-o m-r-sm"></i></a> <a ui-sref="" ng-click="open('')"><i class="fa fa-eye m-l-sm"></i></a></td>
+            </tr>
+            <tr class="text-sm">
+              <td>@amazinghandlerusers</td>
+              <td>01/01/2016</td>
+              <td>10</td>
+              <td><i class="fa fa-circle text-success m-l-sm"></i> OK</td>
+              <td><a ui-sref="app.individual"><i class="fa fa-file-text-o m-r-sm"></i></a> <a ui-sref="" ng-click="open('')"><i class="fa fa-eye m-l-sm"></i></a></td>
+            </tr>
+            <tr class="text-sm">
+              <td>@amazinghandlerusers</td>
+              <td>01/01/2016</td>
+              <td>10</td>
+              <td><i class="fa fa-circle text-danger m-l-sm"></i> Blocked</td>
+              <td><a ui-sref="app.individual"><i class="fa fa-file-text-o m-r-sm"></i></a> <a ui-sref="" ng-click="open('')"><i class="fa fa-eye m-l-sm"></i></a></td>
+            </tr>
+            <tr class="text-sm">
+              <td>@amazinghandlerusers</td>
+              <td>01/01/2016</td>
+              <td>11</td>
+              <td><i class="fa fa-circle text-default m-l-sm"></i> Deactivated</td>
+              <td><a ui-sref="app.individual"><i class="fa fa-file-text-o m-r-sm"></i></a> <a ui-sref="" ng-click="open('')"><i class="fa fa-eye m-l-sm"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- /.table-responsive-->
+      <footer class="panel-footer">
+        <div class="row">
+          <div class="col-sm-4 hidden-xs">
+          </div>
+          <div class="col-sm-4 text-center">
+            <small class="inline m-t-sm m-b-sm">showing 1-25 of 100,000 people</small>
+          </div>
+          <div class="col-sm-4 text-right text-center-xs">                
+            <ul class="pagination pagination-sm m-t-none m-b-none">
+              <li><a href><i class="fa fa-chevron-left"></i></a></li>
+              <li><a href>1</a></li>
+              <li><a href>2</a></li>
+              <li><a href>3</a></li>
+              <li><a href>4</a></li>
+              <li><a href>5</a></li>
+              <li><a href><i class="fa fa-chevron-right"></i></a></li>
+            </ul>
+          </div>
+        </div><!-- /.row-->
+      </footer>
+    </div><!-- /.panel panel-default-->  
+
+  </div><!--/.col-->
+</div><!-- /.wrapper-md-->

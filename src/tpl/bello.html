@@ -1,0 +1,313 @@
+<div class="bg-light lter b-b wrapper-md">
+  <h3 class="m-n text-primary">Bello <a ui-sref="app.form.bellonew"><button class="btn m-b-xs btn-md btn-primary btn-addon pull-right"><i class="fa fa-magic"></i>Create New Campaign</button></a></h3>
+  <h4 class="m-t text-primary font-thin">Send Engaging and Interesting Emails</h4>
+</div>
+<div class="wrapper-md">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <i class="fa fa-calendar m-r text-success"></i> Lifecycle campaigns
+    </div>
+    <div class="row wrapper">
+      <div class="col-sm-5 m-b-xs">
+        <select class="input-sm form-control w-sm inline v-middle">
+          <option value="0">Active</option>
+          <option value="1">Scheduled</option>
+          <option value="2">In Review</option>
+          <option value="3">Not Approved</option>
+          <option value="4">Inactive</option>
+          <option value="5">Not Delivering</option>
+          <option value="6">Deleted</option>
+        </select>
+        <button class="btn btn-sm btn-default">View report</button>                
+      </div>
+      <div class="col-sm-4">
+      </div>
+      <div class="col-sm-3">
+        <div class="input-group">
+          <input type="text" class="input-sm form-control" placeholder="Search your ads">
+          <span class="input-group-btn">
+            <button class="btn btn-sm btn-default" type="button"><i class="fa fa-search"></i></button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped b-t b-light">
+        <thead>
+          <tr>
+            <th style="width:20px;">
+              <label class="i-checks m-b-none">
+                <input type="checkbox"><i></i>
+              </label>
+            </th>
+            <th>Status</th>
+            <th>Campaigns</th>
+            <th>Date</th>
+            <th>Delivered</th>
+            <th>Opened</th>
+            <th>Shared</th>
+            <th>Reach</th>
+            <th>Spent Today</th>
+            <th>Total Spent</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>View</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="text-sm">
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+            <td><i class="fa fa-play fa-fw text-xs"></i> Active</td>
+            <td>Westeros</td>
+            <td>1</td>
+            <td>226,905</td>
+            <td>192,869</td>
+            <td>18,785</td>
+            <td>245,690</td>
+            <td>$8,378.82</td>
+            <td>$125,364.85</td>
+            <td>02/15/15</td>
+            <td>02/31/15</td>
+            <td><a ui-sref="app.form.belloinsights"><i class="fa fa-bar-chart-o m-r-sm"></i></a> <a ui-sref="app.form.belloexisting"><i class="fa fa-eye m-l-sm"></i></a></td>
+          </tr>
+          <tr class="text-sm">
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+            <td><i class="fa fa-pause fa-fw text-xs"></i> Pause</td>
+            <td>Riverrun</td>
+            <td>3</td>
+            <td>184,033</td>
+            <td>156,428</td>
+            <td>11,330</td>
+            <td>195,363</td>
+            <td>$3,798.72</td>
+            <td>$68,377.05</td>
+            <td>02/15/15</td>
+            <td>03/03/15</td>
+            <td><a ui-sref="app.form.belloinsights"><i class="fa fa-bar-chart-o m-r-sm"></i></a> <a ui-sref="app.form.belloexisting"><i class="fa fa-eye m-l-sm"></i></a></td>
+          </tr>
+          <tr class="text-sm">
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+            <td><i class="fa fa-clock-o fa-fw text-xs"></i> Scheduled</td>
+            <td>Winterfell</td>
+            <td>7</td>
+            <td>--</td>
+            <td>--</td>
+            <td>--</td>
+            <td>--</td>
+            <td>$0.00</td>
+            <td>$0.00</td>
+            <td>03/03/15</td>
+            <td>03/15/15</td>
+            <td><a ui-sref="app.form.belloinsights"><i class="fa fa-bar-chart-o m-r-sm"></i></a> <a ui-sref="app.form.belloexisting"><i class="fa fa-eye m-l-sm"></i></a></td>
+          </tr> 
+          <tr class="text-sm">
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+            <td><i class="fa fa-eye fa-fw text-xs"></i> In Review</td>
+            <td>The Eyrie</td>
+            <td>10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>$0.00</td>
+            <td>$0.00</td>
+            <td>03/23/15</td>
+            <td>04/01/15</td>
+            <td><a ui-sref="app.form.belloinsights"><i class="fa fa-bar-chart-o m-r-sm"></i></a> <a ui-sref="app.form.belloexisting"><i class="fa fa-eye m-l-sm"></i></a></td>
+          </tr> 
+          <tr class="text-sm">
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+            <td><i class="fa fa-check fa-fw text-xs"></i> Completed</td>
+            <td>King's Landing</td>
+            <td>12</td>
+            <td>28,507</td>
+            <td>22,807</td>
+            <td>5,701</td>
+            <td>34,208</td>
+            <td>$0.00</td>
+            <td>$29,077.14</td>
+            <td>02/04/15</td>
+            <td>02/17/15</td>
+            <td><a ui-sref="app.form.belloinsights"><i class="fa fa-bar-chart-o m-r-sm"></i></a> <a ui-sref="app.form.belloexisting"><i class="fa fa-eye m-l-sm"></i></a></td>
+          </tr> 
+        </tbody>
+      </table>
+    </div>
+    <footer class="panel-footer">
+      <div class="row">
+        <div class="col-sm-4 hidden-xs">
+        </div>
+        <div class="col-sm-4 text-center">
+          <small class="inline m-t-sm m-b-sm">showing 1-5 of 24 items</small>
+        </div>
+        <div class="col-sm-4 text-right text-center-xs">                
+          <ul class="pagination pagination-sm m-t-none m-b-none">
+            <li><a href><i class="fa fa-chevron-left"></i></a></li>
+            <li><a href>1</a></li>
+            <li><a href>2</a></li>
+            <li><a href>3</a></li>
+            <li><a href>4</a></li>
+            <li><a href>5</a></li>
+            <li><a href><i class="fa fa-chevron-right"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <i class="fa fa-sliders m-r text-info"></i>Triggered campaigns
+    </div>
+    <div class="row wrapper">
+      <div class="col-sm-5 m-b-xs">
+        <select class="input-sm form-control w-sm inline v-middle">
+          <option value="0">Active</option>
+          <option value="1">Scheduled</option>
+          <option value="2">In Review</option>
+          <option value="3">Not Approved</option>
+          <option value="4">Inactive</option>
+          <option value="5">Not Delivering</option>
+          <option value="6">Deleted</option>
+        </select>
+        <button class="btn btn-sm btn-default">View report</button>                
+      </div>
+      <div class="col-sm-4">
+      </div>
+      <div class="col-sm-3">
+        <div class="input-group">
+          <input type="text" class="input-sm form-control" placeholder="Search your ads">
+          <span class="input-group-btn">
+            <button class="btn btn-sm btn-default" type="button"><i class="fa fa-search"></i></button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped b-t b-light">
+        <thead>
+          <tr>
+            <th style="width:20px;">
+              <label class="i-checks m-b-none">
+                <input type="checkbox"><i></i>
+              </label>
+            </th>
+            <th>Status</th>
+            <th>Campaigns</th>
+            <th>Date</th>
+            <th>Delivered</th>
+            <th>Opened</th>
+            <th>Shared</th>
+            <th>Reach</th>
+            <th>Spent Today</th>
+            <th>Total Spent</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>View</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="text-sm">
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+            <td><i class="fa fa-play fa-fw text-xs"></i> Active</td>
+            <td>Westeros</td>
+            <td>1</td>
+            <td>226,905</td>
+            <td>192,869</td>
+            <td>18,785</td>
+            <td>245,690</td>
+            <td>$8,378.82</td>
+            <td>$125,364.85</td>
+            <td>02/15/15</td>
+            <td>02/31/15</td>
+            <td><a ui-sref="app.form.belloinsights"><i class="fa fa-bar-chart-o m-r-sm"></i></a> <a ui-sref="app.form.belloexisting"><i class="fa fa-eye m-l-sm"></i></a></td>
+          </tr>
+          <tr class="text-sm">
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+            <td><i class="fa fa-pause fa-fw text-xs"></i> Pause</td>
+            <td>Riverrun</td>
+            <td>3</td>
+            <td>184,033</td>
+            <td>156,428</td>
+            <td>11,330</td>
+            <td>195,363</td>
+            <td>$3,798.72</td>
+            <td>$68,377.05</td>
+            <td>02/15/15</td>
+            <td>03/03/15</td>
+            <td><a ui-sref="app.form.belloinsights"><i class="fa fa-bar-chart-o m-r-sm"></i></a> <a ui-sref="app.form.belloexisting"><i class="fa fa-eye m-l-sm"></i></a></td>
+          </tr>
+          <tr class="text-sm">
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+            <td><i class="fa fa-clock-o fa-fw text-xs"></i> Scheduled</td>
+            <td>Winterfell</td>
+            <td>7</td>
+            <td>--</td>
+            <td>--</td>
+            <td>--</td>
+            <td>--</td>
+            <td>$0.00</td>
+            <td>$0.00</td>
+            <td>03/03/15</td>
+            <td>03/15/15</td>
+            <td><a ui-sref="app.form.belloinsights"><i class="fa fa-bar-chart-o m-r-sm"></i></a> <a ui-sref="app.form.belloexisting"><i class="fa fa-eye m-l-sm"></i></a></td>
+          </tr> 
+          <tr class="text-sm">
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+            <td><i class="fa fa-eye fa-fw text-xs"></i> In Review</td>
+            <td>The Eyrie</td>
+            <td>10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>$0.00</td>
+            <td>$0.00</td>
+            <td>03/23/15</td>
+            <td>04/01/15</td>
+            <td><a ui-sref="app.form.belloinsights"><i class="fa fa-bar-chart-o m-r-sm"></i></a> <a ui-sref="app.form.belloexisting"><i class="fa fa-eye m-l-sm"></i></a></td>
+          </tr> 
+          <tr class="text-sm">
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+            <td><i class="fa fa-check fa-fw text-xs"></i> Completed</td>
+            <td>King's Landing</td>
+            <td>12</td>
+            <td>28,507</td>
+            <td>22,807</td>
+            <td>5,701</td>
+            <td>34,208</td>
+            <td>$0.00</td>
+            <td>$29,077.14</td>
+            <td>02/04/15</td>
+            <td>02/17/15</td>
+            <td><a ui-sref="app.form.belloinsights"><i class="fa fa-bar-chart-o m-r-sm"></i></a> <a ui-sref="app.form.belloexisting"><i class="fa fa-eye m-l-sm"></i></a></td>
+          </tr> 
+        </tbody>
+      </table>
+    </div>
+    <footer class="panel-footer">
+      <div class="row">
+        <div class="col-sm-4 hidden-xs">
+        </div>
+        <div class="col-sm-4 text-center">
+          <small class="inline m-t-sm m-b-sm">showing 1-5 of 24 items</small>
+        </div>
+        <div class="col-sm-4 text-right text-center-xs">                
+          <ul class="pagination pagination-sm m-t-none m-b-none">
+            <li><a href><i class="fa fa-chevron-left"></i></a></li>
+            <li><a href>1</a></li>
+            <li><a href>2</a></li>
+            <li><a href>3</a></li>
+            <li><a href>4</a></li>
+            <li><a href>5</a></li>
+            <li><a href><i class="fa fa-chevron-right"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</div>

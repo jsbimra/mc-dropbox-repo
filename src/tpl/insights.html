@@ -1,0 +1,412 @@
+<div class="bg-light lter b-b wrapper-md">
+  <h3 class="m-n text-info">Global Insights</h3>
+  <h4 class="m-t font-thin text-info">Combining all campaigns</h4>
+</div>
+
+<div class="wrapper-md" ng-controller="FormDemoCtrl">
+  <div class="col">
+
+  <div class="panel panel-default">
+  <div class="panel-heading font-bold">Financials</div>
+    <div class="wrapper bg-white-only b-b">
+      <div class="row text-center h5">
+        <div class="col-sm-4 col-xs-4">
+          <div class="m-b-sm">$ 0,000,000</div>
+          <div>TOTAL BUDGET</div>
+        </div>
+        <div class="col-sm-4 col-xs-4">
+          <div class="m-b-sm">$ 000,000</div>
+          <div>DAILY BUDGET </div>
+        </div>
+        <div class="col-sm-4 col-xs-4">
+          <div class="m-b-sm">$ 0,000,000</div>
+          <div>SPENT</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="panel panel-default">
+      <div class="bg-dark dker wrapper-lg" ng-controller="FlotChartDemoCtrl">
+        <ul class="nav nav-pills nav-xxs nav-rounded m-b-lg">
+          <li class="active"><a href>Total Delivered in last 7 days</a></li>
+          <li><a href ng-click="refreshData()">Total Delivered in last 14 days</a></li>
+          <li><a href ng-click="refreshData()">Total Delivered in last 30 days</a></li>
+        </ul>
+        <div ui-jq="plot" ui-refresh="d0_1" ui-options="
+        [
+        { data: {{d0_1}}, points: { show: true, radius: 2}, splines: { show: true, tension: 0.4, lineWidth: 1 } }
+        ],
+        {
+        colors: ['{{app.color.info}}', '{{app.color.primary}}'],
+        series: { shadowSize: 3 },
+        xaxis:{ font: { color: '#507b9b' } },
+        yaxis:{ font: { color: '#507b9b' }, max:16 },
+        grid: { hoverable: true, clickable: true, borderWidth: 0, color: '#1c2b36' },
+        tooltip: true,
+        tooltipOpts: { content: 'Visits of %x.1 is %y.4',  defaultTheme: false, shifts: { x: 10, y: -25 } }
+      }
+      " style="min-height:360px" >
+      </div>
+    </div>
+  </div>
+
+
+<div class="panel panel-default">      
+  <div class="panel-heading font-bold">Campaigns</div>
+  <div class="wrapper-md bg-white-only b-b">
+    <div class="row text-center">
+      <div class="col-sm-2 col-xs-4">
+        <div class="h4 m-b-sm">000,000,000</div>
+        <div><i class="fa fa-fw fa-inbox text-default text-sm"></i> Delivered</div>
+      </div>
+      <div class="col-sm-2 col-xs-4">
+        <div class="h4 m-b-sm">00%</div>
+        <div><i class="fa fa-fw fa-file-text text-default text-sm"></i> Open Rate </div>
+      </div>
+      <div class="col-sm-2 col-xs-4">
+        <div class="h4 m-b-sm">00%</div>
+        <div><i class="fa fa-fw fa-external-link text-default text-sm"></i> CTR</div>
+      </div>
+      <div class="col-sm-2 col-xs-4">
+        <div class="h4 m-b-sm">00%</div>
+        <div><i class="fa fa-fw fa-star text-default text-sm"></i> Starred</div>
+      </div>
+      <div class="col-sm-2 col-xs-4">
+        <div class="h4 m-b-sm">00%</div>
+        <div><i class="fa fa-fw fa-mail-forward text-default text-sm"></i> Shared</div>
+      </div>
+      <div class="col-sm-2 col-xs-4">
+        <div class="h4 m-b-sm">00%</div>
+        <div><i class="fa fa-fw fa-dashboard text-default text-sm"></i> --</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div ng-controller="JVectorMapDemoCtrl">
+  <div class="panel b-a">
+    <div class="panel-heading b-b b-light">USA Map</div>
+    <div class="panel-body">
+      <div class="h3 m-b font-thin">Map with selection</div>
+      <div class="row m-b-xl">
+        <div class="col-sm-6">                      
+          <div style="height:240px;" ui-jq="vectorMap" ui-options="{
+            map: 'us_aea_en',
+            markers: {{usa_markers}},
+            backgroundColor: '#f5f8fa',
+            regionsSelectable: true,
+            markersSelectable: true,
+            markerStyle: {
+              initial: {
+                fill: '{{app.color.info}}'
+              },
+              selected: {
+                fill: '#ffffff'
+              }
+            },
+            regionStyle: {
+              initial: {
+                fill: '{{app.color.dark}}'
+              },
+              selected: {
+                fill: '{{app.color.success}}'
+              }
+            },
+            series: {
+              markers: [{
+                attribute: 'r',
+                scale: [5, 15],
+                values: [
+                  100.10,
+                  100.15
+                ]
+              }]
+            }
+          }" >
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="h4 m-b font-thin">Top locations based on 
+            <span class="btn-group dropdown">
+              <button class="btn btn-default" data-toggle="dropdown">Opened messages <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href>Opened</a></li>
+                <li><a href>CTR</a></li>
+                <li><a href>Replied</a></li>
+                <li><a href>Shared</a></li>
+                <li><a href>Starred</a></li>
+              </ul>
+            </span> is <u>Los Angeles</u>.
+          </div>
+          <p>Your audience in <b>Los Angeles</b> is mostly interested in:</p>
+          <div>
+            <div class="inline text-center col-xs-3">
+              <div ui-jq="easyPieChart" ui-options="{
+                      percent: 48,
+                      lineWidth: 4,
+                      trackColor: '{{app.color.light}}',
+                      barColor: '{{app.color.info}}',
+                      scaleColor: '#fff',
+                      size: 100,
+                      lineCap: 'butt',
+                      animate: 1000
+                    }">
+                <div>
+                  <span class="step">48</span>%
+                </div>
+              </div>
+              <p class="text-info font-bold">Fitness and wellness</p>
+            </div>
+            <div class="inline text-center col-xs-3">
+              <div ui-jq="easyPieChart"  ui-options="{
+                      percent: 67,
+                      lineWidth: 4,
+                      trackColor: '{{app.color.light}}',
+                      barColor: '{{app.color.info}}',
+                      scaleColor: '#fff',
+                      size: 100,
+                      lineCap: 'butt',
+                      animate: 1000
+                    }">
+                <div>
+                  <span class="step">67</span>%
+                </div>
+              </div>
+              <p class="text-primary font-bold">Technology</p>
+            </div>
+            <div class="inline text-center col-xs-3">
+              <div ui-jq="easyPieChart" ui-options="{
+                      percent: 71,
+                      lineWidth: 4,
+                      trackColor: '{{app.color.light}}',
+                      barColor: '{{app.color.info}}',
+                      scaleColor: '#fff',
+                      size: 100,
+                      lineCap: 'butt',
+                      animate: 1000
+                    }">
+                <div>
+                  <span class="step">71</span>%
+                </div>
+              </div>
+              <p class="text-info font-bold">Entertainment</p>
+            </div>
+            <div class="inline text-center col-xs-3">
+              <div ui-jq="easyPieChart"  ui-options="{
+                      percent: 83,
+                      lineWidth: 4,
+                      trackColor: '{{app.color.light}}',
+                      barColor: '{{app.color.info}}',
+                      scaleColor: '#fff',
+                      size: 100,
+                      lineCap: 'butt',
+                      animate: 1000
+                    }">
+                <div>
+                  <span class="step">83</span>%
+                </div>
+              </div>
+              <p class="text-primary font-bold">Hobbies and activities</p>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- general metrics -->
+      <div class="panel panel-default">
+        <div class="panel-heading font-bold">
+          General Metrics
+        </div>
+        <div class="row wrapper">
+          <div class="col-sm-5 m-b-xs">
+            <select class="input-sm form-control w-sm inline v-middle">
+              <option value="0">Today</option>
+              <option value="1">Yesterday</option>
+              <option value="2">This week</option>
+              <option value="3">Last week</option>
+              <option value="4">Last 7 days</option>
+              <option value="5">Last 14 days</option>
+              <option value="6">Last 30 days</option>
+              <option value="7">Last 90 days</option>
+              <option value="8">This month</option>
+              <option value="9">Last month</option>
+              <option value="10">Last 3 months</option>
+            </select>
+            <button class="btn btn-sm btn-default">View report</button>                
+          </div>
+          <div class="col-sm-3 m-b-xs">
+            <div class="input-group">
+              <input type="text" class="input-sm form-control" placeholder="Search your ads">
+              <span class="input-group-btn">
+                <button class="btn btn-sm btn-default" type="button"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </div>
+          <div class="col-sm-4 text-right m-b-xs">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default text-sm"><i class="fa fa-save fa-fw text-xs"></i> Save</button>
+              <button type="button" class="btn btn-default text-sm"><i class="fa fa-share fa-fw text-xs"></i> Share</button>
+              <button type="button" class="btn btn-default text-sm"><i class="fa fa-download fa-fw text-xs"></i> Export</button>
+            </div>            
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped b-t b-light">
+            <thead>
+              <tr>
+                <th style="width:20px;">
+                  <label class="i-checks m-b-none">
+                    <input type="checkbox"><i></i>
+                  </label>
+                </th>
+                <th>Status</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Campaign</th>
+                <th>Country</th>
+                <th>Language</th>
+                <th>Interest</th>
+                <th>Delivered</th>
+                <th>Opened</th>
+                <th>Clicked</th>
+                <th>CTR</th>
+                <th>CPC</th>
+                <th>Shared</th>
+                <th>Spend</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="text-sm">
+                <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+                <td><i class="fa fa-play text-success fa-fw text-xs"></i></td>
+                <td>02/20/15</td>
+                <td>02/25/15</td>
+                <td>Westeros</td>
+                <td>USA</td>
+                <td>English</td>
+                <td>Business and industry</td>
+                <td>20,000</td>
+                <td>17,000</td>
+                <td>14,450</td>
+                <td>85%</td>
+                <td>$1,25</td>
+                <td>2,550</td>
+                <td>$12,282.50</td>
+              </tr>
+              <tr class="text-sm">
+                <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+                <td><i class="fa fa-check fa-fw text-xs"></i></td>
+                <td>02/10/15</td>
+                <td>02/18/15</td>
+                <td>Riverrun</td>
+                <td>USA</td>
+                <td>English</td>
+                <td>Entertainement</td>
+                <td>40,000</td>
+                <td>36,800</td>
+                <td>33,856</td>
+                <td>92%</td>
+                <td>$0.95</td>
+                <td>7,448</td>
+                <td>31,147</td>
+              </tr>
+              <tr class="text-sm">
+                <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+                <td><i class="fa fa-check fa-fw text-xs"></i></td>
+                <td>02/10/15</td>
+                <td>02/18/15</td>
+                <td>Riverrun U.K.</td>
+                <td>England</td>
+                <td>English</td>
+                <td>Entertainement</td>
+                <td>40,000</td>
+                <td>34,400</td>
+                <td>22,360</td>
+                <td>86%</td>
+                <td>$1.05</td>
+                <td>1,789</td>
+                <td>19.229.60</td>                
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <footer class="panel-footer">
+          <div class="row">
+            <div class="col-sm-4 hidden-xs">
+            </div>
+            <div class="col-sm-4 text-center">
+              <small class="text-muted inline m-t-sm m-b-sm">showing 1-3 of 58 items</small>
+            </div>
+            <div class="col-sm-4 text-right text-center-xs">                
+              <ul class="pagination pagination-sm m-t-none m-b-none">
+                <li><a href><i class="fa fa-chevron-left"></i></a></li>
+                <li><a href>1</a></li>
+                <li><a href>2</a></li>
+                <li><a href>3</a></li>
+                <li><a href>4</a></li>
+                <li><a href>5</a></li>
+                <li><a href><i class="fa fa-chevron-right"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </div>
+    <!-- /general metrics -->
+
+<div class="panel panel-default">
+  <div class="panel-heading font-bold">
+    Platform and Devices
+  </div>
+  <div class="table-responsive">
+    <table class="table table-striped b-t b-light">
+      <thead>
+        <tr>
+          <th>Operating System</th>
+          <th>Delivered</th>
+          <th>Open Rate</th>
+          <th>CTR</th>
+          <th>Starred</th>
+          <th>Shared</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>iOS</td>
+          <td>000,000</td>
+          <td>00%</td>
+          <td>00%</td>
+          <td>00%</td>
+          <td>00%</td>
+        </tr>
+        <tr>
+          <td>Android</td>
+          <td>000,000</td>
+          <td>00%</td>
+          <td>00%</td>
+          <td>00%</td>
+          <td>00%</td>
+        </tr>
+        <tr>
+          <td>Desktop and laptop computers</td>
+          <td>000,000</td>
+          <td>00%</td>
+          <td>00%</td>
+          <td>00%</td>
+          <td>00%</td>
+        </tr>
+        <tr>
+          <td>Other mobile devices</td>
+          <td>000,000</td>
+          <td>00%</td>
+          <td>00%</td>
+          <td>00%</td>
+          <td>00%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
